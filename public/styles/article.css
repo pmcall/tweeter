@@ -1,0 +1,84 @@
+article {
+  width: 90%;
+  margin: auto;
+  border: 5px;
+  border-style: solid;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+article.div {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5px;
+}
+
+article.tweet header {
+  width: 95%;
+  margin: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+ }
+
+ article.tweet footer {
+  padding: 5px;
+  margin: auto;
+  width: 95%;
+  border-top: 5px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+    flex-direction: row;
+    border-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+
+ }
+
+ .handle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-weight: bolder;
+  color: grey;
+ }
+
+ .date {
+  font-size: medium;
+ }
+
+ .icon-set {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+ }
+
+ .username {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-right: 5px;
+  margin-right: 5px;
+  width: 15%;
+ }
+
+ div.icon-set {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+ }
+
+ div.tweet-body {
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+margin: 20px;
+ }
