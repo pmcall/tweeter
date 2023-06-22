@@ -58,7 +58,7 @@ const createTweetElement = function(tweet) {
       </header>
       <div class="tweet-body">${content}</div>
       <footer>
-        <div class="date">${timeStamp}</div>
+      <div class="date">${timeago.format(timeStamp)}</div>
         <div class="icon-set">
           <i class="fa-solid fa-flag" id="flag" style="color: #86B2FD;"></i>
           <i class="fa-solid fa-retweet" id="retweet" style="color: #86B2FD;"></i>
@@ -72,4 +72,30 @@ const createTweetElement = function(tweet) {
   
 }
 
-renderTweets(data)
+// renderTweets(data)
+
+// Override default form submition and check form before submition
+function tweetSubmission() {
+  $('form').on('submit', data, function(event) {
+    console.log("Someone hit the submit button!");
+    event.preventDefault();
+    let tweetText = $(this).serialize();
+    $.post("http://localhost:8080/tweets", tweetText);
+  });
+}
+
+function loadTweets() {
+  $(document).ready(function() {
+    let url = "http://localhost:8080/tweets";
+    $.ajax({
+      url,
+      method: 'GET',
+      success: (tweets) => {
+        renderTweets(tweets);
+      }
+    })
+      .then(renderTweets(url));
+  });
+}
+
+loadTweets();
