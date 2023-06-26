@@ -6,6 +6,9 @@ $(document).ready(function() {
     if (remainingChars < 0) {
     $(".counter").css('color', 'red')
     }
+    else if (remainingChars >= 0) {
+      $(".counter").css('color', 'black')
+    }
   });
 });
 

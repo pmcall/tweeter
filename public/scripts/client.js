@@ -7,9 +7,10 @@
 $(document).ready(function() {
 
 const renderTweets = function(tweets) {
+  $('.tweet').hide();
   for (const tweet of tweets) {
     let returnedTweet = createTweetElement(tweet)
-      $('#tweets-container').append(returnedTweet);
+      $(returnedTweet).insertAfter("section");
   }
 
 }
@@ -54,6 +55,7 @@ const createTweetElement = function(tweet) {
     })
       .then(loadTweets)
       $("textarea").val("")
+      $(".counter").val("140")
   });
 
 const loadTweets = () => {
@@ -66,5 +68,5 @@ const loadTweets = () => {
 loadTweets();
 
 // TODO: CSS style is not being added to dynamically added tweets
-// TODO: Change font back to black if count < 140
+// TODO: Names do not go to new line
     })
