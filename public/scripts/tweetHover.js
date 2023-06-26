@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("article").on("mouseover", function() {
+  $(".tweet").on("mouseover", function() {
     $(this).css("box-shadow", "5px 5px 5px #B8D2FF");
   }).mouseleave(function() {
     $(this).css("box-shadow", "0px 0px 0px #B8D2FF");
