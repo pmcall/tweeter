@@ -67,10 +67,11 @@ article.tweet header {
  .username {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   padding-right: 5px;
   margin-right: 5px;
-  width: 15%;
+  width: auto;
  }
 
  div.icon-set {
@@ -89,4 +90,27 @@ word-break: break-all;
 
 img {
   padding-right: 10px;
+}
+
+#error-messages {
+font-size:  0.7em;
+color: red;
+padding-left: 5px;
+padding-left: 5px;
+}
+
+i {
+  color: #85B2FD;
+}
+
+i:hover {
+  color: #000;
+}
+
+article.tweet {
+  box-shadow: 0px 0px 0px #B8D2FF
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px 5px #B8D2FF
 }
