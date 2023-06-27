@@ -35,3 +35,22 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ @media only screen and (min-width: 1024px) {
+
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+   main {
+    padding-top: 15%;
+  }
+
+ .page-header {
+    margin-top: 15%;
+    margin-left: 3%;
+    margin-right: 13%;
+  }
+
+}
